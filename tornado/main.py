@@ -6,7 +6,7 @@ class MainHandler(tornado.web.RequestHandler):
         self.write("Hello, world")
 
 def make_app():
-    return tornado.webApplication([
+    return tornado.web.Application([
         (r"/", MainHandler),
     ])
 
